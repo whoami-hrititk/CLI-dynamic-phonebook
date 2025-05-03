@@ -32,15 +32,15 @@ sudo apt install libncurses5-dev libncursesw5-dev
 ```bash
 git clone https://github.com/whoami-hritik/CLI-dynamic-phonebook.git
 cd CLI-dynamic-phonebook
-```bash
+```
     Compile the code:
 ```bash
 g++ phonebook.cpp -lncurses -o phonebook
-```bash
+```
     Run the program:
 ```bash
 ./phonebook
-```bash
+```
 🎮 Controls
 
     Use Arrow Keys to navigate the menu
