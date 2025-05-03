@@ -41,7 +41,7 @@ g++ phonebook.cpp -lncurses -o phonebook
 ```bash
 ./phonebook
 ```
-🎮 Controls
+## 🎮 Controls
 
 Use Arrow Keys to navigate the menu
 
@@ -49,13 +49,13 @@ Press Enter to select an option
 
 Press ESC to go back or exit
 
-📂 Project Structure
+## 📂 Project Structure
 
 phonebook.cpp - Main source code with all features
 
 README.md - Project documentation
 
-💡 Future Improvements
+## 💡 Future Improvements
 
 Edit and remove contact options
 
@@ -63,7 +63,7 @@ Save contacts to a file
 
 Load contacts on startup
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 
 Made by whoami-hritik
 
