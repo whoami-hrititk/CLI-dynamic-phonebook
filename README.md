@@ -25,7 +25,7 @@ To install `ncurses` if it's not already:
 
 ```bash
 sudo apt install libncurses5-dev libncursesw5-dev
-```bash
+```
  How to Run
 
     Clone this repo:
