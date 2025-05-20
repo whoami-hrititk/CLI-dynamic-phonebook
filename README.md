@@ -9,7 +9,7 @@ This project allows you to create, search, and view contacts using a clean, inte
 ## ✨ Features
 
 - 📇 Create new contacts with name and phone number  
-- 🔍 Search contacts by name  
+- 🔍 Search, edit and remove contacts by name  
 - 🎨 Colorful and keyboard-navigated menu using `ncurses` 
 - ⌨️ Works fully in the command-line interface  
 
