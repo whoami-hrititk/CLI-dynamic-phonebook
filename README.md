@@ -55,7 +55,7 @@ README.md - Project documentation
 
 ## 💡 Future Improvements
 
-Edit and remove contact options
+### Contact Persistence options:
 
 Save contacts to a file
 
