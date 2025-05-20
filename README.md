@@ -18,7 +18,7 @@ This project allows you to create, search, and view contacts using a clean, inte
 ## 🛠️ Requirements
 
 - Linux system (Debian or similar)
-- C Compiler (e.g. `gcc`)
+- C Compiler (`gcc` or `clang`)
 - `ncurses` library
 
 To install `ncurses` if it's not already:
