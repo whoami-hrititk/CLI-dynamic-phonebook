@@ -5,6 +5,7 @@
 
 int x,y;
 bool isEdit = false;
+bool isRemove = false;
 
 class PhoneBook{
 private:
@@ -51,7 +52,7 @@ int findContact(char* findName, int count, int &select, bool &isSelect){
 	for(auto &c : phonebook){
 		std::string searchName = c.displayContactName();
 		if(searchName.find(query) != std::string::npos){
-			if(isSelect && i == select){
+			if(isSelect && i == select && isEdit){
 				clear();
 				mvprintw(y/3+4, x/3, "Current Name: %s", c.displayContactName().c_str());
 				mvprintw(y/3+5, x/3, "Current Name: %s", c.displayContactNumber().c_str());
@@ -72,6 +73,16 @@ int findContact(char* findName, int count, int &select, bool &isSelect){
 				nodelay(stdscr, true);
 				return 0;
 				
+			}
+			if(i == select && isRemove && isSelect){
+				phonebook.erase(phonebook.begin()+select);
+				mvprintw(y/3+10, x/3-6, "Contact Removed Sucessfully! Press Any KEY to go back..");
+				getch();
+				clear();
+				isSelect = false;
+				
+				nodelay(stdscr, true);
+				return 0;
 			}
 			if(i == select){
 			
@@ -101,7 +112,7 @@ int findContact(char* findName, int count, int &select, bool &isSelect){
 void searchControl(int c, int &select, int match, bool &isSelect){
 	if(c == KEY_UP && select > 0) select--;
 	else if(c == KEY_DOWN && select < match-1) select++;
-	else if((c == 10 || c == KEY_ENTER) && isEdit) isSelect = true;
+	else if((c == 10 || c == KEY_ENTER) && (isEdit || isRemove)) isSelect = true;
 	return;
 }
 
@@ -209,6 +220,12 @@ void editContact(){
 	return;
 }
 
+void removeContact(){
+	isRemove = true;
+	searchContact();
+	isRemove = false;
+	return;
+}
 
 void controls(int c, int &opt){
 	if(c == KEY_UP && opt > 0) opt--;
@@ -219,6 +236,8 @@ void controls(int c, int &opt){
 		editContact();
 	else if(c== 10 && opt == 2)
 		searchContact();
+	else if(c== 10 && opt == 3)
+		removeContact();
 	return;
 }
 
