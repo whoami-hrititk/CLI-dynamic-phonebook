@@ -26,8 +26,6 @@ To install `ncurses` if it's not already:
 ```bash
 sudo apt install libncurses5-dev libncursesw5-dev
 ```
- How to Run
-
 Clone this repo:
 ```bash
 git clone https://github.com/whoami-hritik/CLI-dynamic-phonebook.git
